@@ -22,14 +22,14 @@
     },
     "subnetName": {
       "type": "string",
-      "defaultValue": "backendSubnet",
+      "defaultValue": "back-dmz-subnet",
       "metadata": {
         "description": "This is the name of the backend subnet"
       }
     },
     "frontendSubnetName": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "trust-dmz-subnet",
       "metadata": {
         "description": "This is the name of the frontend subnet"
       }

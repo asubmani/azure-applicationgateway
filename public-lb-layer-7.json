@@ -58,7 +58,7 @@
     },
     "subnetName": {
       "type": "string",
-      "defaultValue": "UntrustLB",
+      "defaultValue": "untrust-dmz-subnetLB",
       "metadata": {
         "description": "App Gateway subnet Name"
       }

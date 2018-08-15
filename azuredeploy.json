@@ -18,7 +18,7 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vnet-FW",
+      "defaultValue": "dmz-vnet",
       "metadata": {
         "description": "Virtual Network Name"
       }
@@ -36,7 +36,7 @@
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "172.24.0.0/16",
       "metadata": {
         "description": "CIDR for Virtual Network"
       }
@@ -98,14 +98,14 @@
     },
     "appGatewaySubnetName": {
       "type": "string",
-      "defaultValue": "AppGWSubnet",
+      "defaultValue": "ag-dmz-subnet",
       "metadata": {
         "description": "Subnet for App Gateway"
       }
     },
     "appGatewaySubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.3.0/24",
+      "defaultValue": "172.24.3.0/24",
       "metadata": {
         "description": "CIDR for App Gateway"
       }
@@ -117,16 +117,16 @@
         "description": "Internal Load Balancer name - used to identify resource in Azure portal"
       }
     },
-    "backendSubnetName": {
+    "back-dmz-subnetName": {
       "type": "string",
-      "defaultValue": "backendSubnet",
+      "defaultValue": "back-dmz-subnet",
       "metadata": {
         "description": "Subnet for Backend WWW Network"
       }
     },
-    "backendSubnetPrefix": {
+    "back-dmz-subnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.4.0/24",
+      "defaultValue": "172.24.4.0/24",
       "metadata": {
         "description": "CIDR for Backend WWW Network"
       }
@@ -322,7 +322,7 @@
                "value": "[parameters('appGatewaySubnetName')]"
           },
           "subnetWWWName": {
-               "value": "[parameters('backendSubnetName')]"
+               "value": "[parameters('back-dmz-subnetName')]"
           },
           "subnet0Prefix": {
                "value": "[parameters('mgmtSubnetPrefix')]"
@@ -337,7 +337,7 @@
                "value": "[parameters('appGatewaySubnetPrefix')]"
           },
           "subnetWWWPrefix": {
-               "value": "[parameters('backendSubnetPrefix')]"
+               "value": "[parameters('back-dmz-subnetPrefix')]"
           }
         }
       }
@@ -524,7 +524,7 @@
                "value": "[parameters('sshPublicKey')]"
           },
           "subnetName": {
-               "value": "[parameters('backendSubnetName')]"
+               "value": "[parameters('back-dmz-subnetName')]"
           },
           "frontendSubnetName": {
                "value": "[parameters('trustedSubnetName')]"

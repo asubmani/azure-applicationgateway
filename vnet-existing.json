@@ -8,14 +8,14 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vnet-FW",
+      "defaultValue": "dmz-vnet",
       "metadata": {
         "description": "VNET name"
       }
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "172.24.0.0/16",
       "metadata": {
         "description": "CIDR for vnet"
       }
@@ -29,28 +29,28 @@
     },
     "subnet1Name": {
       "type": "string",
-      "defaultValue": "Untrust",
+      "defaultValue": "untrust-dmz-subnet",
       "metadata": {
         "description": "Subnet for Untrust"
       }
     },
     "subnet2Name": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "trust-dmz-subnet",
       "metadata": {
-        "description": "Subnet for Trust"
+        "description": "Subnet for trust-dmz-subnet"
       }
     },
     "subnetLBName": {
       "type": "string",
-      "defaultValue": "UntrustLB",
+      "defaultValue": "untrust-dmz-subnetLB",
       "metadata": {
         "description": "Subnet for App Gateway"
       }
     },
     "subnetWWWName": {
       "type": "string",
-      "defaultValue": "backendSubnet",
+      "defaultValue": "back-dmz-subnet",
       "metadata": {
         "description": "Subnet for backend WWW"
       }
@@ -78,14 +78,14 @@
     },
     "subnetLBPrefix": {
       "type": "string",
-      "defaultValue": "192.168.3.0/24",
+      "defaultValue": "172.24.3.0/24",
       "metadata": {
         "description": "App Gateway CIDR"
       }
     },
     "subnetWWWPrefix": {
       "type": "string",
-      "defaultValue": "192.168.4.0/24",
+      "defaultValue": "172.24.4.0/24",
       "metadata": {
         "description": "backend WWW CIDR"
       }
